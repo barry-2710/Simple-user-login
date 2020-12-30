@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Guvi Assignment</title>
   </head>
   <body>
@@ -15,6 +15,9 @@
     <nav class="navbar navbar-light bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand text-white mb-0 h1" href="#">Barry</a>
+            <div class="d-flex">
+                <a class="nav-link text-white" href="#">Login/SignUp</a>
+            </div>
         </div>
     </nav>
     </div>

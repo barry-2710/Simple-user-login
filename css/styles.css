@@ -1,0 +1,28 @@
+body .main-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#login-card .card {
+  margin-left: auto;
+  margin-right: auto;
+}
+#login-card form {
+  padding: 5px;
+}
+#login-card .btn {
+  border-radius: 40px;
+}
+
+#home img {
+  height: 400px;
+  width: 100%;
+}
+#home .not-updated h3 {
+  color: #99adf9;
+}
+#home .updated img {
+  height: 150px;
+  width: 150px;
+}
