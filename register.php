@@ -15,22 +15,25 @@
                     <form>
                         <div class="mb-3">
                             <label for="inputName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" aria-describedby="emailHelp">
+                            <input type="text" class="form-control name" name="name" id="Name" aria-describedby="emailHelp">
+                            <div class="invalid-feedback" style="font-size:16px;">Name is required</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            <input type="email" class="form-control email" name="email" id="Email" aria-describedby="emailHelp">
+                            <div class="invalid-feedback emailError" style="font-size:16px;">Email is required</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control password" name="password" id="Password">
+                            <div class="invalid-feedback" style="font-size:16px;">Password is required</div>
                         </div>
                         <div class="mb-3">
                             <label for="phoneNumber" class="form-label">Phone</label>
-                            <input type="number" class="form-control" id="phoneNumber">
+                            <input type="number" class="form-control phone" name="phone" id="Phone">
+                            <div class="invalid-feedback" style="font-size:16px;">Phone is required</div>
                         </div>
-                        <button type="submit" class="w-100 btn btn-lg btn-outline-dark text-center mt-3">Sign Up</button>
+                        <button type="submit" class="w-100 btn btn-lg btn-outline-dark text-center mt-3" id="sign_up">Sign Up</button>
                     </form>
                     <p class="text-dark text-center mt-4">Already Registered? <a href="index.php" class="text-dark fw-bold">Click here to Sign In</a></p>
                 </div>
@@ -38,5 +41,8 @@
         </div>
     </div>
     <?php include "footer.php" ?>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> 
 </body>
 </html>
