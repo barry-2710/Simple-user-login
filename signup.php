@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include "db.php";
 
 if(isset($_POST['name']) && ($_POST['email']) && ($_POST['password']) && ($_POST['phone'])){
