@@ -1,4 +1,7 @@
-<?php include "navbar.php" ?>
+<?php 
+include "navbar.php";
+include "auth.php";
+?>
 
 <div class="main-content">
     <div class="container" id="home">

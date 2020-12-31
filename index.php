@@ -7,7 +7,13 @@
 </head>
 <body>
     <div class="main-content">
-        <?php include "navbar.php" ?>
+        <?php 
+            include "navbar.php";
+            if(isset($_SESSION["loggedin"])) {
+                header("Location: home.php");
+                exit();
+            }
+        ?>
         <div class="container mt-5 mb-5 pb-5" id="login-card">
             <div class="card col-lg-6">
                 <div class="card-body bg-light">
@@ -15,11 +21,13 @@
                     <form>
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" name="email" id="Email" aria-describedby="emailHelp">
+                            <input type="email" class="form-control email" name="email" id="Email" aria-describedby="emailHelp">
+                            <div class="invalid-feedback emailError" style="font-size:16px;">Email is required</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password" id="Password">
+                            <input type="password" class="form-control password" name="password" id="Password">
+                            <div class="invalid-feedback passwordError" style="font-size:16px;">Password is required</div>
                         </div>
                         <button type="submit" id="sign_in" class="w-100 btn btn-lg btn-outline-dark text-center mt-3">Sign In</button>
                     </form>
@@ -29,5 +37,8 @@
         </div>
     </div>
     <?php include "footer.php" ?>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </body>
 </html>

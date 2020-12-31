@@ -7,7 +7,13 @@
 </head>
 <body>
     <div class="main-content">
-        <?php include "navbar.php" ?>
+        <?php 
+        include "navbar.php";
+        if(isset($_SESSION["loggedin"])) {
+            header("Location: home.php");
+            exit();
+        }
+    ?>
         <div class="container mt-5 mb-5 pb-5" id="login-card">
             <div class="card col-lg-6">
                 <div class="card-body bg-light">
@@ -43,6 +49,6 @@
     <?php include "footer.php" ?>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script> 
+  crossorigin="anonymous"></script>
 </body>
 </html>
